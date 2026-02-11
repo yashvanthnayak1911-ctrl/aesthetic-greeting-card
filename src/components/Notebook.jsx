@@ -148,7 +148,7 @@ const Notebook = () => {
                             <motion.button
                                 onClick={() => handleNavClick('prev')}
                                 style={navButtonStyle}
-                                whileTap={{ scale: 0.9 }}
+                                whileTap={{ scale: 0.9, x: [0, -3, 3, -3, 3, 0] }} // Shake effect
                             >
                                 Previous
                             </motion.button>
@@ -156,7 +156,7 @@ const Notebook = () => {
                                 <motion.button
                                     onClick={() => handleNavClick('next')}
                                     style={navButtonStyle}
-                                    whileTap={{ scale: 0.9 }}
+                                    whileTap={{ scale: 0.9, x: [0, -3, 3, -3, 3, 0] }} // Shake effect
                                 >
                                     Next
                                 </motion.button>
