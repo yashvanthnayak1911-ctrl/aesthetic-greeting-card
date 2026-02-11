@@ -141,8 +141,9 @@ const Notebook = () => {
                             bottom: '-50px',
                             width: '100%',
                             display: 'flex',
-                            justifyContent: 'space-between',
-                            padding: '0 2rem'
+                            justifyContent: 'center', // Centered for mobile safety
+                            gap: '40px', // Nice spacing but not too wide
+                            zIndex: 10
                         }}>
                             <motion.button
                                 onClick={() => handleNavClick('prev')}
