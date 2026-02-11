@@ -87,9 +87,6 @@ const Notebook = () => {
     ];
 
     const turnPage = (direction) => {
-        // Haptic feedback
-        if (navigator.vibrate) navigator.vibrate(100);
-
         if (direction === 'next') {
             if (pageIndex < pages.length - 1) setPageIndex(pageIndex + 1);
         } else {
@@ -98,11 +95,17 @@ const Notebook = () => {
         }
     };
 
+    const handleNavClick = (direction) => {
+        // Haptic feedback - explicit call on user interaction
+        if (navigator.vibrate) navigator.vibrate(200);
+        turnPage(direction);
+    };
+
     return (
         <div style={{
             position: 'relative',
-            width: '400px',
-            height: '600px',
+            width: 'min(90vw, 400px)', // Responsive width
+            height: 'min(80vh, 600px)', // Responsive height
             perspective: '1500px'
         }}>
             <AnimatePresence mode="wait">
@@ -142,7 +145,7 @@ const Notebook = () => {
                             padding: '0 2rem'
                         }}>
                             <motion.button
-                                onClick={() => turnPage('prev')}
+                                onClick={() => handleNavClick('prev')}
                                 style={navButtonStyle}
                                 whileTap={{ scale: 0.9 }}
                             >
@@ -150,7 +153,7 @@ const Notebook = () => {
                             </motion.button>
                             {pageIndex < pages.length - 1 && (
                                 <motion.button
-                                    onClick={() => turnPage('next')}
+                                    onClick={() => handleNavClick('next')}
                                     style={navButtonStyle}
                                     whileTap={{ scale: 0.9 }}
                                 >
