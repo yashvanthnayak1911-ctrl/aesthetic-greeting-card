@@ -142,7 +142,7 @@ const Notebook = () => {
                             width: '100%',
                             display: 'flex',
                             justifyContent: 'center', // Centered for mobile safety
-                            gap: '40px', // Nice spacing but not too wide
+                            gap: '20px', // Closer spacing as requested
                             zIndex: 10
                         }}>
                             <motion.button
