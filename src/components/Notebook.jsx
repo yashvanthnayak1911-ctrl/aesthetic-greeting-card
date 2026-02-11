@@ -13,7 +13,7 @@ const Notebook = () => {
         {
             content: (
                 <div style={{ textAlign: 'left', marginTop: '1rem', paddingLeft: '0' }}>
-                    <h2 style={{ fontFamily: 'Dancing Script, cursive', fontSize: '3.70rem', marginBottom: '0.2rem', lineHeight: '1', color: '#5d4037' }}>Dear Love <FaHeart style={{ color: 'red', fontSize: '1.5rem', marginLeft: '5px', verticalAlign: 'middle' }} />,</h2>
+                    <h2 style={{ fontFamily: 'Dancing Script, cursive', fontSize: 'min(12vw, 3.7rem)', marginBottom: '0.2rem', lineHeight: '1', color: '#5d4037', whiteSpace: 'nowrap' }}>Dear Love <FaHeart style={{ color: 'red', fontSize: 'min(5vw, 1.5rem)', marginLeft: '5px', verticalAlign: 'middle' }} />,</h2>
                     <p style={noteStyle}>
 
                         A HAPPY VALENTINE'S DAY BABY..!!!.
